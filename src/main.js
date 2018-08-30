@@ -3,6 +3,15 @@
 import Vue from "vue";
 import App from "./App";
 import router from "./router";
+import Icons from "./plugins/icons";
+import Components from "./plugins/components";
+import Filters from "./plugins/filters";
+import Lodash from "./plugins/lodash";
+
+Vue.use(Icons);
+Vue.use(Filters);
+Vue.use(Components);
+Vue.use(Lodash);
 
 Vue.config.productionTip = false;
 
