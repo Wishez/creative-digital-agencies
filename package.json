@@ -16,8 +16,13 @@
   "dependencies": {
     "breakpoint-sass": "^2.7.1",
     "eslint-plugin-vue": "^4.7.1",
+    "lodash": "^4.17.10",
+    "moment": "^2.22.2",
+    "moment-timezone": "^0.5.21",
+    "pace-progress": "^1.0.2",
     "sass-loader": "^7.1.0",
     "vue": "^2.5.2",
+    "vue-awesome": "^3.1.0",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
