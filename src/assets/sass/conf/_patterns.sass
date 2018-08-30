@@ -1,9 +1,12 @@
 .pointer
 	cursor: pointer
+
 .relative
-	@extend %relative
+	position: relative
+
 .absolute
-	@extend %absolute
+	position: absolute
+
 .fixed
 	position: fixed
 	z-index: 10
@@ -45,13 +48,7 @@
 	box-shadow: 2px 4px 6px 0 $shadow
 .cascadingShadow
 	box-shadow: 0 4px 15px 0 $shadow
-.hover
-	&-color
-		&_white:hover
-			color: $white
-	&-backgroundColor
-		&_burgund:hover
-			background-color: $burgund
+
 .after:after
 .after_bsolute:after
 .pseudo
@@ -279,21 +276,39 @@
 	font-weight: 300
 .italic
 	font-style: italic
+
 .normalStyle
 	font-style: normal
+
 .normalWeight
 	font-weight: normal
-.whiteColor
-	color: $white
-.pinkColor
-	color: $pink
-.burgundColor
-	color: $burgund
+	
+.color
+
+	&_blue
+		color: $blue
+	
+	&_white 
+		color: $white
+
 .darkGrayColor
 	color: $darkGray
+
 .background-color
-	&_pink
-		background-color: $pink
+
+	&_blue
+		background-color: $blue
+
+	&_darkGray
+		background-color: $darkGray
+
+	&_white
+		background-color: $white
+
+	&_lightGray
+		background-color: #f3f3f3
+
+
 .visible-hidden-xs
 	@include breakpoint($xs)
 		white-space: nowrap
@@ -319,15 +334,17 @@
 
 .fewRound
 	border-radius: 3px
+
 .whiteBackground
 	background-color: #fff
+
 .darkGrayBackground
 	background-color: $darkGray
-.orderButtons
-	@extend %relative
+
 .shown_element
 	opacity: 1
 	tranition: opcaity .3s ease-in
+
 .lazy
 	will-change: opacity
 	opacity: 0
@@ -351,8 +368,9 @@
 	border: 5px solid rgba(0, 0, 0, 0);
 	height: 75px
 	margin: 0 auto
-	background-color: $burgund
+	background-color: $blue
 	box-shadow: -2px 2px 6px 0 $shadow
+
 ::-webkit-scrollbar-button
     width: 0
     height: 0
@@ -460,76 +478,6 @@ input[type=number]:hover::-webkit-inner-spin-button
 		letter-spacing: .15em
 	&_5
 		letter-spacing: .05em
-
-// .fadeTranslateToTop
-// 	&-enter, &-leave-to
-// 		opacity: 0
-// 		transform: translateY(1.5rem)
-
-// 	&-enter-active, &-leave-active
-// 		transition: opacity .2s ease-in, transform .2s ease-in-out
-// 		transform: translateY(0)
-//   		will-change: opacity, transform
-
-// 	&-enter, &-leave-to
-// 		transform: translateY(1.5rem)
-// 		opacity: 0
-// .fadeTranslateFromTop
-// 	&-enter, &-leave-to
-// 		opacity: 0
-// 		transform: translateY(-1.5rem)
-
-// 	&-enter-active, &-leave-active
-// 		transition: opacity .2s ease-in, transform .2s ease-in-out
-// 		transform: translateY(0)
-//   		will-change: opacity, transform
-
-// 	&-enter, &-leave-to
-// 		transform: translateY(-1.5rem)
-// 		opacity: 0
-
-// .fading
-// 	&-appear
-// 		opacity: 0.1
-// 		will-change: opacity
-// 		&.fading-appear-active
-// 			transition: opacity 1s ease-in
-// 			opacity: 1
-// 	&-enter
-// 		opacity: 0.1
-// 		will-change: opacity
-// 		&.fading-enter-active
-// 			transition: opacity .5s ease-in
-// 			opacity: 1
-// 	&-leave
-// 		opacity: 1
-// 		will-change: opacity
-// 		&.fading-leave-active
-// 			transition: opacity .3s ease-in
-// 			opacity: 0.1
-// .translate
-// 	&-appear
-// 		transform: translateX(-200%)
-// 		will-change: transform
-// 		&.translate-appear-active
-// 			transition: transform .7s ease-in
-// 			transform: translateX(0)
-// 	&-enter
-// 		transform: translateX(-200%)
-// 		will-change: transform
-// 		&.translate-enter-active
-// 			transition: transform .7s ease-in
-// 			transform: translateX(0)
-// 	&-exit
-
-// 		// margin-top: 4.6875em
-// 		position: absolute
-
-// 		will-change: opacity
-// 		opacity: 1
-// 		&.translate-exit-active
-// 			transition: opacity .3s ease-in
-// 			opacity: 0
 
 a.disableUnderline
 	background-image: none
