@@ -43,7 +43,7 @@
       <h2 class="visible-hidden">News</h2>
       <div class="parent">
 
-        <article class="news color_white background-color_darkGray">
+        <article class="halfWidth news color_white background-color_darkGray">
           <h3>Akita Inu Dog</h3>
 
           <div class="metaNews parent">
@@ -63,7 +63,7 @@
       
       <div class="parent">
 
-        <article class="news background-color_lightGray parent">
+        <article class="halfWidth news background-color_lightGray parent">
           <h3>Akita Inu Dog</h3>
           <div class="metaNews parent">
             <time :datetme="new Date() | foramteDate">{{ new Date() | formateDate }}</time> 
@@ -80,8 +80,10 @@
           src="@/assets/images/workspace.png" 
           alt="">
       </div>
-      
+    </section>
 
+    <section>
+      <h1 class="whithBigChar text_upper">Let's blog</h1>
     </section>
   </div>
 </template>
